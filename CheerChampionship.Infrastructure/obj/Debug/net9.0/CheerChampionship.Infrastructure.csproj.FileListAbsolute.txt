@@ -1,0 +1,14 @@
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/bin/Debug/net9.0/CheerChampionship.Infrastructure.deps.json
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/bin/Debug/net9.0/CheerChampionship.Infrastructure.dll
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/bin/Debug/net9.0/CheerChampionship.Infrastructure.pdb
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.AssemblyInfoInputs.cache
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.AssemblyInfo.cs
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.dll
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/refint/CheerChampionship.Infrastructure.dll
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.pdb
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/ref/CheerChampionship.Infrastructure.dll
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.csproj.AssemblyReference.cache
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/bin/Debug/net9.0/CheerChampionship.Infrastructure.runtimeconfig.json
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.genruntimeconfig.cache
