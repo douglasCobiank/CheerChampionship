@@ -5,7 +5,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using CheerChampionship.Infrastructure.Repositories.Campeonato;
 using CheerChampionship.Core.Handler.Championships.Services;
-using CheerChampionship.API.Mappers;
+using CheerChampionship.Core.Handler.Championships.Mappers;
+using CheerChampionship.Core.Handler.Teams.Mappers;
+using CheerChampionship.Core.Handler.Teams.Interface;
+using CheerChampionship.Core.Handler.Teams.Service;
+using CheerChampionship.Core.Handler.Teams;
+using CheerChampionship.Infrastructure.Repositories.Equipe;
 
 namespace CheerChampionship.API
 {
@@ -44,10 +49,17 @@ namespace CheerChampionship.API
             services.AddAutoMapper(typeof(CampeonatoMapper));
             services.AddAutoMapper(typeof(CheerChampionship.Core.Handler.Championships.Mappers.CampeonatoMapper));
 
+            services.AddAutoMapper(typeof(TeamMapper));
+            services.AddAutoMapper(typeof(CheerChampionship.Core.Handler.Teams.Mappers.TeamMapper));
+
             // Injeção de dependência
             services.AddScoped<ICampeonatoHandler, CampeonatoHandler>();
             services.AddScoped<ICampeonatoRepository, CampeonatoRepository>();
             services.AddScoped<ICampeonatoService, CampeonatoService>();
+
+            services.AddScoped<ITeamHandler, TeamHandler>();
+            services.AddScoped<IEquipeRepository, EquipeRepository>();
+            services.AddScoped<ITeamService, TeamService>();
         }
 
         // Aqui configuramos o pipeline de execução

@@ -12,3 +12,4 @@
 /Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.csproj.AssemblyReference.cache
 /Users/douglascobiank/backend/CheerChampionship.Infrastructure/bin/Debug/net9.0/CheerChampionship.Infrastructure.runtimeconfig.json
 /Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.genruntimeconfig.cache
+/Users/douglascobiank/backend/CheerChampionship.Infrastructure/obj/Debug/net9.0/CheerChampionship.Infrastructure.sourcelink.json
