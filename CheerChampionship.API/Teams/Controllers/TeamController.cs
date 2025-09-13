@@ -21,7 +21,7 @@ namespace CheerChampionship.API.Teams.Controllers
         }
 
         // POST: api/equipe
-        [HttpPost("api/equipe")]
+        [HttpPost("cadastrar")]
         public IActionResult CriarEquipe([FromBody] Team team)
         {
             var equipeDto = _mapper.Map<Equipe>(team);

@@ -21,7 +21,7 @@ namespace CheerChampionship.API.Championship.Controllers
         }
 
         // POST: api/campeonatos
-        [HttpPost("api/campeonatos")]
+        [HttpPost("cadastrar")]
         public IActionResult CriarCampeonato([FromBody] Campeonato campeonato)
         {
             var campeonatoDto = _mapper.Map<Core.Handler.Championships.Models.Championship>(campeonato);
@@ -31,7 +31,7 @@ namespace CheerChampionship.API.Championship.Controllers
         }
 
         // PUT: api/campeonatos/{id}
-        [HttpPut("api/campeonatos/{id}")]
+        [HttpPut("editar/{id}")]
         public IActionResult EditarCampeonato(Guid id, [FromBody] Campeonato campeonato)
         {
             var campeonatoDto = _mapper.Map<Core.Handler.Championships.Models.Championship>(campeonato);
@@ -41,7 +41,7 @@ namespace CheerChampionship.API.Championship.Controllers
         }
 
         // GET: api/campeonatos/buscar?nome=X&cidade=Y
-        [HttpGet("api/campeonatos/buscar")]
+        [HttpGet("buscar")]
         public IActionResult BuscarCampeonato([FromQuery] string nome, [FromQuery] string cidade)
         {
             _campeonatoHandler.BuscaCampeonatoHandler(nome, cidade);
