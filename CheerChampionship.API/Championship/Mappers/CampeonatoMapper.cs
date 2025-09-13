@@ -9,7 +9,7 @@ namespace CheerChampionship.API.Championship.Mappers
     {
         public CampeonatoMapper()
         {
-            CreateMap<Campeonato, Championship>()
+            CreateMap<Campeonato, Core.Handler.Championships.Models.Championship>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Nome))
                 .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.Data))
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.Local));

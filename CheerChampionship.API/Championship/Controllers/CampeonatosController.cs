@@ -24,7 +24,7 @@ namespace CheerChampionship.API.Championship.Controllers
         [HttpPost("api/campeonatos")]
         public IActionResult CriarCampeonato([FromBody] Campeonato campeonato)
         {
-            var campeonatoDto = _mapper.Map<Championship>(campeonato);
+            var campeonatoDto = _mapper.Map<Core.Handler.Championships.Models.Championship>(campeonato);
             _campeonatoHandler.CadastraCampeonatoHandler(campeonatoDto);
 
             return Ok(new[] { $"Campeonato criado"});
@@ -34,7 +34,7 @@ namespace CheerChampionship.API.Championship.Controllers
         [HttpPut("api/campeonatos/{id}")]
         public IActionResult EditarCampeonato(Guid id, [FromBody] Campeonato campeonato)
         {
-            var campeonatoDto = _mapper.Map<Championship>(campeonato);
+            var campeonatoDto = _mapper.Map<Core.Handler.Championships.Models.Championship>(campeonato);
             _campeonatoHandler.EditaCampeonatoHandler(campeonatoDto);
 
             return Ok($"Campeonato '{campeonatoDto.Name}' editado com sucesso!");
