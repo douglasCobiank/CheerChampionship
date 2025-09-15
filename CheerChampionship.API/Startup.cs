@@ -46,11 +46,7 @@ namespace CheerChampionship.API
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             // registra AutoMapper e procura os profiles no assembly
-            services.AddAutoMapper(typeof(CampeonatoMapper));
-            services.AddAutoMapper(typeof(CheerChampionship.Core.Handler.Championships.Mappers.CampeonatoMapper));
-
-            services.AddAutoMapper(typeof(TeamMapper));
-            services.AddAutoMapper(typeof(CheerChampionship.Core.Handler.Teams.Mappers.TeamMapper));
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             // Injeção de dependência
             services.AddScoped<ICampeonatoHandler, CampeonatoHandler>();
