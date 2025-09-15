@@ -1,27 +1,26 @@
 using CheerChampionship.Core.Handler.Teams.Interface;
-using CheerChampionship.Core.Handler.Teams.Models;
-using CheerChampionship.Infrastructure.Repositories.Equipe;
-using CheerChampionship;
-
+using CheerChampionship.Infrastructure.Repositories.Team;
 using AutoMapper;
+using CheerChampionship.Infrastructure.Data.Models;
+using CheerChampionship.Core.Handler.Teams.Models;
 
 namespace CheerChampionship.Core.Handler.Teams.Service
 {
     public class TeamService : ITeamService
     {
-        private readonly IEquipeRepository _equipeRepository;
+        private readonly ITeamRepository _teamRepository;
         private readonly IMapper _mapper;
 
-        public TeamService(IEquipeRepository equipeRepository, IMapper mapper)
+        public TeamService(ITeamRepository teamRepository, IMapper mapper)
         {
-            _equipeRepository = equipeRepository;
+            _teamRepository = teamRepository;
             _mapper = mapper;
         }
 
-        public Task AddEquipeAsync(Models.Equipe equipe)
+        public Task AddEquipeAsync(Equipe equipe)
         {
-            var teamDto = _mapper.Map<Infrastructure.Data.Models.Equipe>(equipe);
-            return _equipeRepository.AddAsync(teamDto);
+            var teamDto = _mapper.Map<EquipeData>(equipe);
+            return _teamRepository.AddAsync(teamDto);
         }
 
     }

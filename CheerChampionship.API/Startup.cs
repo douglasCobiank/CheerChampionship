@@ -3,14 +3,15 @@ using CheerChampionship.Core.Handler;
 using CheerChampionship.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using CheerChampionship.Infrastructure.Repositories.Campeonato;
+using CheerChampionship.Infrastructure.Repositories.Championship;
 using CheerChampionship.Core.Handler.Championships.Services;
-using CheerChampionship.Core.Handler.Championships.Mappers;
-using CheerChampionship.Core.Handler.Teams.Mappers;
 using CheerChampionship.Core.Handler.Teams.Interface;
 using CheerChampionship.Core.Handler.Teams.Service;
 using CheerChampionship.Core.Handler.Teams;
-using CheerChampionship.Infrastructure.Repositories.Equipe;
+using CheerChampionship.Infrastructure.Repositories.Team;
+using CheerChampionship.Core.Handler.Athletes.Interface;
+using CheerChampionship.Core.Handler.Athletes;
+using CheerChampionship.Infrastructure.Repositories.Athlete;
 
 namespace CheerChampionship.API
 {
@@ -49,13 +50,17 @@ namespace CheerChampionship.API
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             // Injeção de dependência
-            services.AddScoped<ICampeonatoHandler, CampeonatoHandler>();
-            services.AddScoped<ICampeonatoRepository, CampeonatoRepository>();
-            services.AddScoped<ICampeonatoService, CampeonatoService>();
+            services.AddScoped<IChampionshipHandler, ChampionshipHandler>();
+            services.AddScoped<IChampionshipRepository, ChampionshipRepository>();
+            services.AddScoped<IChampionshipService, ChampionshipService>();
 
             services.AddScoped<ITeamHandler, TeamHandler>();
-            services.AddScoped<IEquipeRepository, EquipeRepository>();
+            services.AddScoped<ITeamRepository, TeamRepository>();
             services.AddScoped<ITeamService, TeamService>();
+
+            services.AddScoped<IAthleteHandler, AthleteHandler>();
+            services.AddScoped<IAthleteRepository, AthleteRepository>();
+            services.AddScoped<IAthleteService, AthleteService>();
         }
 
         // Aqui configuramos o pipeline de execução

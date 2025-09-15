@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CheerChampionship.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a7e5f6750052e9695971380ada1b619d262c22d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e75091093889f819c044ef0d49896a18dda4ba61")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheerChampionship.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheerChampionship.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

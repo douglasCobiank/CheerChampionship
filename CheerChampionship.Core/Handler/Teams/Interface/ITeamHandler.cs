@@ -1,5 +1,4 @@
 using CheerChampionship.Core.Handler.Teams.Models;
-using System.Threading.Tasks;
 
 namespace CheerChampionship.Core.Handler.Teams.Interface
 {

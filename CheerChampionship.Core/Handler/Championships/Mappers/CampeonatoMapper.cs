@@ -4,11 +4,11 @@ using CheerChampionship.Infrastructure.Data.Models;
 
 namespace CheerChampionship.Core.Handler.Championships.Mappers
 {
-    public class CampeonatoMapper : Profile
+    public class ChampionshipMapper : Profile
     {
-        public CampeonatoMapper()
+        public ChampionshipMapper()
         {
-            CreateMap<Championship, Campeonato>();
+            CreateMap<Campeonato, CampeonatoData>();
         }
     }
 }
