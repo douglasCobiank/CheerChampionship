@@ -24,7 +24,9 @@
 
 
  <ItemGroup>
-   <ProjectReference Include="..\CheerChampionship.API\CheerChampionship.API.csproj" />
-   <ProjectReference Include="..\CheerChampionship.Core\CheerChampionship.Core.csproj" />
-   <ProjectReference Include="..\CheerChampionship.Infrastructure\CheerChampionship.Infrastructure.csproj" />
+   <ProjectReference Include="..\..\CheerChampionship.Core\CheerChampionship.Core.csproj" />
+   <ProjectReference Include="..\..\CheerChampionship.Infrastructure\CheerChampionship.Infrastructure.csproj" />
+   <ProjectReference Include="..\..\CheerChampionship.API\CheerChampionship.API.csproj" />
  </ItemGroup>
+
+  </Project>

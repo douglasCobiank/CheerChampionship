@@ -9,6 +9,7 @@
       "CheerChampionship.API.Tests/1.0.0": {
         "dependencies": {
           "CheerChampionship.API": "1.0.0",
+          "CheerChampionship.Core": "1.0.0",
           "CheerChampionship.Infrastructure": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.12.0",
           "Moq": "4.20.72",

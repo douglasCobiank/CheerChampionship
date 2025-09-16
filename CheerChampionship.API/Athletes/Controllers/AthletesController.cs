@@ -21,12 +21,12 @@ namespace CheerChampionship.API.Athletes.Controllers
 
         // POST: api/campeonatos
         [HttpPost("cadastrar")]
-        public IActionResult CriarCampeonato([FromBody] AtletaDto atleta)
+        public IActionResult CriarAtleta([FromBody] AtletaDto atleta)
         {
             var atletaDto = _mapper.Map<Atleta>(atleta);
             _athletesHandler.CadastraAthleteHandler(atletaDto);
 
-            return Ok(new[] { $"Campeonato criado" });
+            return Ok(new[] { $"Atleta criado" });
         }
     }
 }

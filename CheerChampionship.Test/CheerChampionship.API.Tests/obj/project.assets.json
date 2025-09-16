@@ -2400,6 +2400,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "CheerChampionship.API >= 1.0.0",
+      "CheerChampionship.Core >= 1.0.0",
       "CheerChampionship.Infrastructure >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "Moq >= 4.20.72",
@@ -2435,6 +2436,9 @@
           "projectReferences": {
             "/Users/douglascobiank/backend/CheerChampionship.API/CheerChampionship.API.csproj": {
               "projectPath": "/Users/douglascobiank/backend/CheerChampionship.API/CheerChampionship.API.csproj"
+            },
+            "/Users/douglascobiank/backend/CheerChampionship.Core/CheerChampionship.Core.csproj": {
+              "projectPath": "/Users/douglascobiank/backend/CheerChampionship.Core/CheerChampionship.Core.csproj"
             },
             "/Users/douglascobiank/backend/CheerChampionship.Infrastructure/CheerChampionship.Infrastructure.csproj": {
               "projectPath": "/Users/douglascobiank/backend/CheerChampionship.Infrastructure/CheerChampionship.Infrastructure.csproj"
