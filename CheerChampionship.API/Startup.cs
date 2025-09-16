@@ -12,6 +12,7 @@ using CheerChampionship.Infrastructure.Repositories.Team;
 using CheerChampionship.Core.Handler.Athletes.Interface;
 using CheerChampionship.Core.Handler.Athletes;
 using CheerChampionship.Infrastructure.Repositories.Athlete;
+using CheerChampionship.Core.Handler.Athletes.Services;
 
 namespace CheerChampionship.API
 {
@@ -44,7 +45,8 @@ namespace CheerChampionship.API
 
             // Banco de dados (PostgreSQL) - ajuste a ConnectionString no appsettings.json
             services.AddDbContext<CheerDbContext>(options =>
-                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"),
+                    o => o.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)));
 
             // registra AutoMapper e procura os profiles no assembly
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

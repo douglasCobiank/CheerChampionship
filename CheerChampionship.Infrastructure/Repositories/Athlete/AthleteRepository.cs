@@ -1,21 +1,15 @@
 using CheerChampionship.Infrastructure.Data;
 using CheerChampionship.Infrastructure.Data.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CheerChampionship.Infrastructure.Repositories.Athlete
 {
-    public class AthleteRepository: IAthleteRepository
+    public class AthleteRepository(CheerDbContext context) 
+        : Repository<AtletaData>(context), IAthleteRepository
     {
-        private readonly CheerDbContext _context;
-
-        public AthleteRepository(CheerDbContext context)
+        public async Task<AtletaData?> GetByNomeAsync(string nome)
         {
-            _context = context;
-        }
-
-        public async Task AddAsync(AtletaData atletaData)
-        {
-            _context.Atletas.Add(atletaData);
-            await _context.SaveChangesAsync();
+            return await _dbSet.FirstOrDefaultAsync(a => a.Nome == nome);
         }
     }
 }

@@ -11,6 +11,7 @@ namespace CheerChampionship.Infrastructure.Data
         public DbSet<CampeonatoData> Campeonatos { get; set; }
         public DbSet<EquipeData> Equipes { get; set; }
         public DbSet<AtletaData> Atletas { get; set; }
+        public DbSet<DocumentoData> Documentos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,6 +24,9 @@ namespace CheerChampionship.Infrastructure.Data
 
             modelBuilder.Entity<AtletaData>().HasKey(c => c.Id);
             modelBuilder.Entity<AtletaData>().Property(e => e.Id).ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<DocumentoData>().HasKey(c => c.Id);
+            modelBuilder.Entity<DocumentoData>().Property(e => e.Id).ValueGeneratedOnAdd();
 
             base.OnModelCreating(modelBuilder);
         }
