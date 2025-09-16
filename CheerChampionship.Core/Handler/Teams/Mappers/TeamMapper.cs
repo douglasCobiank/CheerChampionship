@@ -1,6 +1,6 @@
 using AutoMapper;
 using CheerChampionship.Core.Handler.Teams.Models;
-using CheerChampionship;
+using CheerChampionship.Infrastructure.Data.Models;
 
 namespace CheerChampionship.Core.Handler.Teams.Mappers
 {
@@ -8,7 +8,7 @@ namespace CheerChampionship.Core.Handler.Teams.Mappers
     {
         public TeamMapper()
         {
-            CreateMap<Models.Equipe, Infrastructure.Data.Models.Equipe>();
+            CreateMap<Equipe, EquipeData>();
         }
     }
 }

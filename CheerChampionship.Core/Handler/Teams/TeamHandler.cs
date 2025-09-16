@@ -1,6 +1,5 @@
-using CheerChampionship.Core.Handler.Teams;
-using System.Threading.Tasks;
 using CheerChampionship.Core.Handler.Teams.Interface;
+using CheerChampionship.Core.Handler.Teams.Models;
 
 namespace CheerChampionship.Core.Handler.Teams
 {
@@ -13,7 +12,7 @@ namespace CheerChampionship.Core.Handler.Teams
             _teamService = teamService;
         }
 
-        public async Task CadastraEquipeHandler(Models.Equipe equipe)
+        public async Task CadastraEquipeHandler(Equipe equipe)
         {
             await _teamService.AddEquipeAsync(equipe);
         }

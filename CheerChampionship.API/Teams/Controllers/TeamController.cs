@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using CheerChampionship.Core.Handler.Teams;
 using CheerChampionship.Core.Handler.Teams.Models;
 using CheerChampionship.API.Teams.Models;
 using CheerChampionship.Core.Handler.Teams.Interface;
@@ -22,10 +21,10 @@ namespace CheerChampionship.API.Teams.Controllers
 
         // POST: api/equipe
         [HttpPost("cadastrar")]
-        public IActionResult CriarEquipe([FromBody] Team team)
+        public IActionResult CriarEquipe([FromBody] EquipeDto equipeDto)
         {
-            var equipeDto = _mapper.Map<Equipe>(team);
-            _teamHandler.CadastraEquipeHandler(equipeDto);
+            var equipe = _mapper.Map<Equipe>(equipeDto);
+            _teamHandler.CadastraEquipeHandler(equipe);
 
             return Ok(new[] { $"Equipe criada"});
         }

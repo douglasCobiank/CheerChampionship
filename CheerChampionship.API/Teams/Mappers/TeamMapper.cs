@@ -8,7 +8,7 @@ namespace CheerChampionship.API.Teams.Mappers
     {
         public TeamMapper()
         {
-            CreateMap<Team, Equipe>().ReverseMap();
+            CreateMap<EquipeDto, Equipe>().ReverseMap();
         }
     }
 }
